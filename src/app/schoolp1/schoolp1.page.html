@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="tertiary">
+        <ion-buttons slot="start" >
+          <ion-button (click)="back()">
+           <ion-icon  name="arrow-undo-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-title>{{myname}}</ion-title>
+   </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+   <ion-slides  #slider pager="true" [options]="slideOpts" (ionSlideDidChange)='ionSlideDidChange()'>
+      <ion-slide >
+        <img src="{{this.image01}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{this.image02}}">
+      </ion-slide>
+      <ion-slide>
+        <img src="{{this.image03}}">
+      </ion-slide>
+    </ion-slides>
+
+
+
+
+
+  <ion-label>{{myhigh}}</ion-label><br/>
+    <ion-label>ที่อยู่ : {{address}}</ion-label><br/>
+  <ion-label>{{myhigh}}</ion-label>
+
+</ion-content>
+
